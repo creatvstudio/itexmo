@@ -1,0 +1,43 @@
+{
+    "name": "creatvstudio/itexmo",
+    "description": "iTexMo API client for PHP.",
+    "keywords": [
+        "creatvstudio",
+        "itexmo"
+    ],
+    "homepage": "https://github.com/creatvstudio/itexmo",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jeffrey Naval",
+            "email": "jeff@creatvstudio.ph"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.16",
+        "kitetail/zttp": "^0.6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CreatvStudio\\Itexmo\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CreatvStudio\\Itexmo\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

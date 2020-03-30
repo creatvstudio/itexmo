@@ -15,10 +15,13 @@ class Itexmo
 
     protected $apiCode;
 
+    protected $password;
+
     protected $message;
 
-    public function __construct($apiCode) {
+    public function __construct($apiCode, $password = null) {
         $this->apiCode = $apiCode;
+        $this->password = $password;
         $this->message = new Message;
     }
 
@@ -117,6 +120,7 @@ class Itexmo
             '5' => $this->message->get('priority'),
             '6' => $this->message->get('sender'),
             '7' => $this->message->get('server'),
+            'passwd' => $this->password,
         ];
 
         return (new Collection($params))->filter(function($item) {

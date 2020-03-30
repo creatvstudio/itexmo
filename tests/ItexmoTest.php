@@ -63,6 +63,22 @@ class ItexmoTest extends TestCase
     }
 
     /** @test */
+    public function it_has_a_password_request_param()
+    {
+        $itexmo = new Itexmo('APICODE', 'MY-PASSWORD');
+
+        $this->assertEquals($itexmo->getMessageRequestParams()['passwd'], 'MY-PASSWORD');
+    }
+
+    /** @test */
+    public function it_ignores_passwd_param_if_password_is_not_provided()
+    {
+        $itexmo = new Itexmo('APICODE');
+
+        $this->assertEquals(isset($itexmo->getMessageRequestParams()['passwd']), false);
+    }
+
+    /** @test */
     public function get_message_default_value()
     {
         $itexmo = $this->itexmo->content('Hello to all humans!');

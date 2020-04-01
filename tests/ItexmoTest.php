@@ -9,7 +9,10 @@ class ItexmoTest extends TestCase
 {
     protected $itexmo;
 
-    public function setUp() {
+    public function setUp() : void
+    {
+        parent::setUp();
+
         $this->itexmo = new Itexmo('APICODE');
     }
 

@@ -20,7 +20,8 @@
         "kitetail/zttp": "^0.6.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.0"
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
     },
     "autoload": {
         "psr-4": {
@@ -35,7 +36,13 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CreatvStudio\\Itexmo\\Laravel\\ItexmoServiceProvider"
+            ]
+        }
     },
     "config": {
         "sort-packages": true

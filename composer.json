@@ -3,7 +3,8 @@
     "description": "iTexMo API client for PHP.",
     "keywords": [
         "creatvstudio",
-        "itexmo"
+        "itexmo",
+        "laravel"
     ],
     "homepage": "https://github.com/creatvstudio/itexmo",
     "license": "MIT",

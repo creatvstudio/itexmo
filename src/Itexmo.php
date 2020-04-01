@@ -77,11 +77,11 @@ class Itexmo
     public function send($params = null)
     {
         if (! is_null($params) && ! is_array($params)) {
-            throw new Exception('$params should be an array');
+            throw new Exception('$params is expected to be an array');
         }
 
         if (! is_null($params)) {
-            $this->message = $params;
+            $this->message = new Message($params);
         }
 
         try {

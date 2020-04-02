@@ -1,6 +1,6 @@
 <?php
 
-namespace CreatvStudio\Itexmo\Laravel;
+namespace CreatvStudio\Itexmo;
 
 use CreatvStudio\Itexmo\Itexmo;
 use Illuminate\Support\ServiceProvider;

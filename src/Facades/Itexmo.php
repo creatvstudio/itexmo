@@ -1,6 +1,6 @@
 <?php
 
-namespace CreatvStudio\Itexmo\Laravel\Facades;
+namespace CreatvStudio\Itexmo\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

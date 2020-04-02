@@ -57,7 +57,7 @@ Add ItexmoServiceProvider to your config.
 
     ...
 
-    CreatvStudio\Itexmo\Laravel\ItexmoServiceProvider::class,
+    CreatvStudio\Itexmo\ItexmoServiceProvider::class,
 ]
 ```
 
@@ -89,7 +89,7 @@ If you want to use the `Itexmo` Facade you can also add the alias to your config
 'aliases' => [
     ...
 
-    'Itexmo' => CreatvStudio\Itexmo\Laravel\Facades\Itexmo::class,
+    'Itexmo' => CreatvStudio\Itexmo\Facades\Itexmo::class,
 
 ]
 ```

@@ -2,7 +2,7 @@
 
 use CreatvStudio\Itexmo\Itexmo;
 use Orchestra\Testbench\TestCase;
-use CreatvStudio\Itexmo\Laravel\ItexmoServiceProvider;
+use CreatvStudio\Itexmo\ItexmoServiceProvider;
 
 class LaravelTest extends TestCase
 {
@@ -14,7 +14,7 @@ class LaravelTest extends TestCase
     protected function getPackageAliases($app)
     {
         return [
-            'Itexmo' => \CreatvStudio\Itexmo\Laravel\Facades\Itexmo::class,
+            'Itexmo' => \CreatvStudio\Itexmo\Facades\Itexmo::class,
         ];
     }
 

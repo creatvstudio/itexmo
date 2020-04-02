@@ -25,5 +25,9 @@ class ItexmoServiceProvider extends ServiceProvider
             $config = config('services.itexmo');
             return (new Itexmo($config['code'], $config['password']))->sender($config['sender_id']);
         });
+
+        $this->app->bind(Itexmo::class, function() {
+            return $this->app->make('itexmo');
+        });
     }
 }

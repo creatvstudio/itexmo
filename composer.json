@@ -41,7 +41,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "CreatvStudio\\Itexmo\\Laravel\\ItexmoServiceProvider"
+                "CreatvStudio\\Itexmo\\ItexmoServiceProvider"
             ]
         }
     },

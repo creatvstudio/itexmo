@@ -123,7 +123,7 @@ class Itexmo
             'passwd' => $this->password,
         ];
 
-        return (new Collection($params))->filter(function($item) {
+        return collect($params)->filter(function($item) {
             return ! is_null($item);
         })->toArray();
     }

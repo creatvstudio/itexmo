@@ -77,7 +77,7 @@ Add your Itexmo credentials to `config/services.php` and `.env` file.
 'itexmo' => [
     'code' => env('ITEXTMO_CODE'),
     'password' => env('ITEXMO_PASSWORD'),
-    'senders' => explode(',', env('ITEXTMO_SENDERS')),
+    'sender_id' => env('ITEXMO_SENDER_ID'),
 ]
 ```
 

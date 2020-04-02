@@ -6,7 +6,7 @@ use Exception;
 use Zttp\Zttp;
 use GuzzleHttp\Client;
 use CreatvStudio\Itexmo\Message;
-use Illuminate\Support\Collection;
+use Tightenco\Collect\Support\Collection;
 use CreatvStudio\Itexmo\Exceptions\ItexmoRequestException;
 
 class Itexmo

@@ -17,8 +17,8 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "^6.16",
-        "kitetail/zttp": "^0.6.0"
+        "kitetail/zttp": "^0.6.0",
+        "tightenco/collect": "^5.4"
     },
     "require-dev": {
         "orchestra/testbench": "^4.0",

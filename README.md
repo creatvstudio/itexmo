@@ -1,10 +1,12 @@
 # iTexmo
 
-<!--
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/creatvstudio/itexmo.svg?style=flat-square)](https://packagist.org/packages/creatvstudio/itexmo)
-[![Build Status](https://img.shields.io/travis/creatvstudio/itexmo/master.svg?style=flat-square)](https://travis-ci.org/creatvstudio/itexmo)
-[![Quality Score](https://img.shields.io/scrutinizer/g/creatvstudio/itexmo.svg?style=flat-square)](https://scrutinizer-ci.com/g/creatvstudio/itexmo)
 [![Total Downloads](https://img.shields.io/packagist/dt/creatvstudio/itexmo.svg?style=flat-square)](https://packagist.org/packages/creatvstudio/itexmo)
+
+<!--
+[![Build Status](https://img.shields.io/travis/creatvstudio/itexmo/master.svg?style=flat-square)](https://travis-ci.org/creatvstudio/itexmo)
+
+[![Quality Score](https://img.shields.io/scrutinizer/g/creatvstudio/itexmo.svg?style=flat-square)](https://scrutinizer-ci.com/g/creatvstudio/itexmo)
 -->
 
 iTexMo API client for PHP.

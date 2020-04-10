@@ -19,12 +19,12 @@ class ItexmoTest extends TestCase
     /** @test */
     public function sends_sms_message()
     {
-        $response = $this->itexmo->to('09173048896')
+        $response = $this->itexmo->to('09171234567')
             ->content('Hello to all humans!')
             ->send();
 
         $this->assertEquals([
-            "to" => "09173048896",
+            "to" => "09171234567",
             "content" => "Hello to all humans!",
         ], $this->itexmo->message());
     }

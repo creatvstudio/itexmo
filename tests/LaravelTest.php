@@ -31,7 +31,7 @@ class LaravelTest extends TestCase
     /** @test */
     public function facade_loads_itexmo_class()
     {
-        $itexmo = \Itexmo::content('test');
+        $itexmo = \Itexmo::getFacadeRoot();
 
         $this->assertInstanceOf(Itexmo::class, $itexmo);
     }

@@ -82,6 +82,14 @@ class ItexmoTest extends TestCase
     }
 
     /** @test */
+    public function it_ignores_passwd_param_if_password_is_an_empty_string()
+    {
+        $itexmo = new Itexmo('APICODE', '');
+
+        $this->assertEquals(isset($itexmo->getMessageRequestParams()['passwd']), false);
+    }
+
+    /** @test */
     public function get_message_default_value()
     {
         $itexmo = $this->itexmo->content('Hello to all humans!');

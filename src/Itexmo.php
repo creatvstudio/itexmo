@@ -21,7 +21,7 @@ class Itexmo
 
     public function __construct($apiCode, $password = null) {
         $this->apiCode = $apiCode;
-        $this->password = $password;
+        $this->password = $password ?: null;
         $this->message = new Message;
     }
 

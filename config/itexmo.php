@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'code' => env('ITEXTMO_CODE'),
+    'code' => env('ITEXMO_CODE'),
     'password' => env('ITEXMO_PASSWORD'),
-    'sender_id' => env('ITEXTMO_SENDER_ID'),
+    'sender_id' => env('ITEXMO_SENDER_ID'),
 ];

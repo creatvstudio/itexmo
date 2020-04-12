@@ -23,9 +23,11 @@ class LaravelTest extends TestCase
     {
         $itexmo = app('itexmo');
 
+        $params = $itexmo->getMessageRequestParams();
+
         $this->assertInstanceOf(Itexmo::class, $itexmo);
-        $this->assertEquals($itexmo->getMessageRequestParams()['3'], 'MY-CODE');
-        $this->assertEquals($itexmo->getMessageRequestParams()['passwd'], 'MY-PASSWORD');
+        $this->assertEquals($params['3'], getenv('ITEXMO_CODE'));
+        $this->assertEquals($params['passwd'], getenv('ITEXMO_PASSWORD'));
     }
 
     /** @test */

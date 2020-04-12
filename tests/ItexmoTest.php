@@ -8,23 +8,25 @@ use CreatvStudio\Itexmo\Itexmo;
 class ItexmoTest extends TestCase
 {
     protected $itexmo;
+    protected $smsReceiver;
 
     public function setUp() : void
     {
         parent::setUp();
 
-        $this->itexmo = new Itexmo('APICODE');
+        $this->itexmo = new Itexmo(getenv('ITEXMO_CODE'), getenv('ITEXMO_PASSWORD'));
+        $this->smsReceiver = getenv('TEST_SMS_RECEIVER') ?: '09171234567';
     }
 
     /** @test */
     public function sends_sms_message()
     {
-        $response = $this->itexmo->to('09171234567')
+        $response = $this->itexmo->to($this->smsReceiver)
             ->content('Hello to all humans!')
             ->send();
 
         $this->assertEquals([
-            "to" => "09171234567",
+            "to" => $this->smsReceiver,
             "content" => "Hello to all humans!",
         ], $this->itexmo->message());
     }
@@ -34,7 +36,7 @@ class ItexmoTest extends TestCase
     {
         $response = $this->itexmo->status();
 
-        $this->assertArraySubset([
+        $this->assertEquals([
             'result' => [
                 'APIStatus' => 'ONLINE',
                 'DedicatedServer' => 'DIRECT',
@@ -47,11 +49,11 @@ class ItexmoTest extends TestCase
     /** @test */
     public function get_message_array_using_message_function()
     {
-        $itexmo = $this->itexmo->to('09171234567')
+        $itexmo = $this->itexmo->to($this->smsReceiver)
             ->content('Hello to all humans!');
 
         $this->assertEquals($itexmo->message(), [
-            'to' => '09171234567',
+            'to' => $this->smsReceiver,
             'content' => 'Hello to all humans!',
         ]);
     }
@@ -59,10 +61,10 @@ class ItexmoTest extends TestCase
     /** @test */
     public function get_message_value_by_key()
     {
-        $itexmo = $this->itexmo->to('09171234567')
+        $itexmo = $this->itexmo->to($this->smsReceiver)
             ->content('Hello to all humans!');
 
-        $this->assertEquals($itexmo->message('to'), '09171234567');
+        $this->assertEquals($itexmo->message('to'), $this->smsReceiver);
     }
 
     /** @test */

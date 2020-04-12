@@ -20,8 +20,9 @@
         </whitelist>
     </filter>
     <php>
-        <env name="ITEXTMO_CODE" value="MY-CODE" />
+        <env name="ITEXMO_CODE" value="MY-CODE" />
         <env name="ITEXMO_PASSWORD" value="MY-PASSWORD" />
-        <env name="ITEXTMO_SENDERS" value="09191234567" />
+        <env name="ITEXMO_SENDER_ID" value="MY-SENDER" />
+        <env name="TEST_SMS_RECEIVER" value="09171234567" />
     </php>
 </phpunit>

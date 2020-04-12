@@ -160,6 +160,29 @@ class SmsController extends Controller
 
 ### Testing
 
+You need your Itexmo credentials to test the API. For this you have to create a `phpunit.xml` file. You can do this by copying the `phpunit.xml.dist`.
+
+``` bash
+cp phpunit.xml.dist phpunit.xml
+```
+
+And replace the `ITEXMO` env variables with your credentials.
+
+```
+...
+
+<php>
+    <env name="ITEXMO_CODE" value="MY-CODE" />
+    <env name="ITEXMO_PASSWORD" value="MY-PASSWORD" />
+    <env name="ITEXMO_SENDER_ID" value="MY-SENDER" />
+    <env name="TEST_SMS_RECEIVER" value="09171234567" />
+</php>
+
+...
+```
+
+To start the test.
+
 ``` bash
 composer test
 ```
